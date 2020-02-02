@@ -13,9 +13,9 @@ const winningConditions = [
 let board;
 let turn;
 let win;
-let a;
-
-
+let a = "";
+let x = document.getElementByClassName("X")
+let o = document.getElementByClassName("O")
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -33,21 +33,13 @@ function init() {
     "", "", ""
   ];
 
-  do {
-    let a = prompt("Who goes first?")
-    if (a == null) {
-      break;
-    }
+  x.onclick = function() {
+    a = "X"
+  }
 
-    a = String(a)
-    a = a.toUpperCase()
-
-    if (a !== "X" || a !== "O") {
-      alert("Invalid value. Please type either X or O.")
-    }
-  } while (a !== "X" || a !== "O")
-
-
+  o.onclick = function() {
+    a = "O"
+  }
 
   turn = a;
   win = null;
