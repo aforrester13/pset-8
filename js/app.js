@@ -94,3 +94,9 @@ function getWinner() {
 
   return winner ? winner : board.includes("") ? null : "T";
 }
+
+function scoreKeeper() {
+  if (winner == "X") {
+    
+  }
+}
