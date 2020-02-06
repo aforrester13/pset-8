@@ -14,9 +14,6 @@
   <body>
     <h1>Tic | Tac | Toe</h1>
 
-    <button class="X">X</button>
-    <button class="O">O</button>
-
     <div class="container column">
       <h2>Turn: X</h2>
 
@@ -35,5 +32,21 @@
       <div id="reset-button">Play Again!</div>
     </div>
 
+        <p id="score">Score:</p>
+      <div class= "big container">
+        <div id="x">
+          <p id="x-text">X:</p>
+          <button onclick = "subtract()">-</button>
+          <input type="number" class= "input" />
+          <button onclick = "add()">+</button>
+        </div>
+        <div id="o">
+          <p id="x-text">O:</p>
+          <button onclick = "subtract()">-</button>
+          <input type="number" class="input" />
+          <button onclick = "add()">+</button>
+        </div>
+
+      </div>
   </body>
 </html>

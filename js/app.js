@@ -11,11 +11,9 @@ const winningConditions = [
 ];
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 let board;
+let score;
 let turn;
 let win;
-let a = "";
-let x = document.getElementByClassName("X")
-let o = document.getElementByClassName("O")
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -33,17 +31,26 @@ function init() {
     "", "", ""
   ];
 
-  x.onclick = function() {
-    a = "X"
-  }
-
-  o.onclick = function() {
-    a = "O"
-  }
-
-  turn = a;
+  turn = whoGoesFirst();
   win = null;
   render();   // we'll write this later
+}
+
+function whoGoesFirst() {
+  do {
+    var a = prompt("Who goes first?")
+    if (a == null) {
+      break;
+    }
+
+    a = String(a)
+
+    if (a != "X" && a != "x" && a != "O" && a != "o") {
+      alert("Invalid value. Please type either X or O.")
+    }
+  } while (a != "X" && a != "x" && a != "O" && a != "o" && a != null)
+
+  return a
 }
 
 function render() {
@@ -53,6 +60,7 @@ function render() {
 
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
+
 }
 
 function takeTurn(e) {
