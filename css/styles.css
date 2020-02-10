@@ -1,6 +1,10 @@
+* {
+  background-color: beige;
+}
+
 body {
   text-align: center;
-  font-family: "Roboto", monospace;
+  font-family: "Courier", monospace;
 }
 
 /*
@@ -10,8 +14,10 @@ body {
 
 h1 {
   margin: 0 auto;
-  font-family: "Major Mono Display", monospace;
-  font-size: 48px;
+  font-family: "Courier", monospace;
+  font-size: 70px;
+  color: red;
+
   margin: 2%;
 }
 
@@ -21,6 +27,12 @@ h1 {
  */
 
 h2 {
+  font-size: 36px;
+  font-weight: lighter;
+  margin: 2%;
+}
+
+h3 {
   font-size: 36px;
   font-weight: lighter;
   margin: 2%;
@@ -64,8 +76,9 @@ h2 {
  */
 
  .square {
-   border: 1px solid rgba(0, 0, 0, 0.75);
+   border: 1px solid red;
    font-size: 96px;
+   color: red;
    height: 150px;
    line-height: 150px;
    user-select: none;
@@ -84,6 +97,44 @@ h2 {
 /*
  * The reset button sits just below the board.
  */
+
+
+
+.x {
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.o {
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  background-color: white
+  color: black;
+  cursor: pointer;
+}
+
+.input {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border-color: black;
+  border-width: 3px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.wins {
+  padding: 20px;
+  margin: 2%;
+}
 
 #reset-button {
   background-color: white;
@@ -107,44 +158,35 @@ h2 {
   cursor: pointer;
 }
 
-.x {
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  font-size: 32px;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}
-
-.o {
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  font-size: 32px;
-  background-color: white
-  color: black;
-  cursor: pointer;
-}
-
-#score {
-  text-align: center;
-  font-size: 32px;
-  font-weight: lighter;
-}
-
 #x {
   margin: 1%;
   padding: 2px;
 }
 
-.input {
-  width: 40px;
-  height: 40px;
-  border-radius: 2px;
-  border-color: black;
-  border-width: 3px;
+
+
+#reset-scoreboard {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 21px;
+  line-height: 55px;
+  margin: 1%;
   text-align: center;
-  font-size: 32px;
+  width: 456px;
+}
+
+#reset-scoreboard:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#table {
+  font-size: 36px;
   font-weight: lighter;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid black;
+  padding: 30px;
 }

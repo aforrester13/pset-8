@@ -14,37 +14,40 @@
   <body>
     <h1>Tic | Tac | Toe</h1>
 
-    <div class="container column">
-      <h2>Turn: X</h2>
+    <h3>Score: </h3>
 
-      <div class="container wrap" id="board">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-      </div>
+    <table id = "table">
+      <tr>
+        <th class = "wins">X Wins</th>
+        <th class = "wins"># of ties</th>
+        <th class = "wins">O Wins</th>
+      </tr>
+      <tr>
+        <td id="x_score">0</td>
+        <td id="tie_score">0</td>
+        <td id="o_score">0</td>
+      </tr>
+    </table>
 
-      <div id="reset-button">Play Again!</div>
-    </div>
+        <div class="container column">
+          <h2>Turn: X</h2>
 
-        <p id="score">Score:</p>
+          <div class="container wrap" id="board">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
 
-      <div class= "big-container">
+          <div id="reset-scoreboard">Reset Scoreboard</div>
 
-        <div id="x">
-          <p id="x-text">X:</p>
-          <p id="x-score"></p>
+          <div id="reset-button">Play Again!</div>
+
         </div>
-        <div id="o">
-          <p id="o-text">O:</p>
-          <p id="o-score"></p>
-        </div>
-
-      </div>
   </body>
 </html>
